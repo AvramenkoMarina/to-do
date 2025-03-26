@@ -11,10 +11,10 @@ Built with Next.js, TypeScript, and Tailwind CSS.
 
 - Uses an API to store tasks
 
-## Встановлення
+## Installation
 
 git clone https://github.com/your-username/your-repo-name.git
 
-cd your-repo-name
-npm install
-npm run dev
+- cd your-repo-name
+- npm install
+- npm run dev
