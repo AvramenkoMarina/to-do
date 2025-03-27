@@ -32,7 +32,7 @@ const AddTask: React.FC<AddTaskProps> = ({
 					<h3 className='font-bold text-lg'>Add new Task</h3>
 					<div className='modal-action'>
 						<input
-							value={newTask}
+							value={newTask ?? ''}
 							onChange={event => setNewTask(event.target.value)}
 							type='text'
 							placeholder='Type here'

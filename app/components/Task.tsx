@@ -21,6 +21,11 @@ const Task: React.FC<TaskProp> = ({ task, onUpdate, onDelete }) => {
 	const handleEditTodo: FormEventHandler<HTMLFormElement> = async event => {
 		event.preventDefault()
 
+		if (task.id === undefined) {
+			console.error('Task ID is undefined')
+			return
+		}
+
 		const updatedTask = {
 			id: task.id,
 			title: taskToEdit,
