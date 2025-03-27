@@ -5,6 +5,7 @@ import AddTask from './components/AddTask'
 import TodoList from './components/TodoList'
 import { getAllTodos, addTodo } from '@/api'
 import { Todo } from './types/ToDo'
+import { v4 as uuidv4 } from 'uuid'
 
 export default function Home() {
 	const [todos, setTodos] = useState<Todo[]>([])
@@ -28,6 +29,7 @@ export default function Home() {
 		if (!newTask.trim()) return
 
 		const newTodo = {
+			id: uuidv4(),
 			title: newTask,
 			completed: false,
 		}
